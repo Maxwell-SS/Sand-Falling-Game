@@ -1,4 +1,5 @@
 # SFML Sand Falling Game
+![Example Sand Gif](ExampleGif.gif)
 
 ## Elements
 ```Eraser``` ![#e2aeb4](https://via.placeholder.com/15/e2aeb4/000000?text=+)
