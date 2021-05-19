@@ -5,8 +5,6 @@
 #include "UI.hpp"
 #include "Common.hpp"
 
-// g++ main.cpp Cell.cpp UI.cpp -o app -lsfml-graphics -lsfml-window -lsfml-system
-
 int windowWidth = 1280, windowHeight = 720;
 
 int cellSize = 3, brushSize = 5, selectedCell = 0;
@@ -30,7 +28,7 @@ int main()
 	
 	UI ui(gridWidth, gridHeight);
 	ui.InitButtons(1, 5);
-	ui.DrawButtons(windowWidth - 40, (windowHeight - windowHeight) + 10, 30, 30, sf::Color::White, 40);
+	ui.DrawButtons(windowWidth - 40, (windowHeight - windowHeight) + 10, 30, 30, 40);
 	
 		
 	sf::Clock clock;

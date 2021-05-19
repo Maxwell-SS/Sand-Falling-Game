@@ -16,7 +16,7 @@ void UI::InitButtons(int ButtonArrayWidth, int ButtonArrayHeight) {
 	UIelements.resize(ButtonArrayWidth * ButtonArrayHeight * 4);
 }
 
-void UI::DrawButtons(int xPos, int yPos, float btnWidth, float btnHeight, sf::Color color, int offset) {
+void UI::DrawButtons(int xPos, int yPos, float btnWidth, float btnHeight, int offset) {
     for (int x = 0; x < ButtonArrayWidth; ++x) {
         for (int y = 0; y < ButtonArrayHeight; ++y) {
 		    sf::Vertex* quad = &UIelements[(x + y * ButtonArrayWidth) * 4];
@@ -27,6 +27,7 @@ void UI::DrawButtons(int xPos, int yPos, float btnWidth, float btnHeight, sf::Co
 		    quad[3].position = sf::Vector2f((xPos + (x * offset)), yPos + (y * offset) + btnHeight);
 
 		    if (y == 0) {
+		    	// Eraser Color
 		    	quad[0].color = sf::Color(226, 174, 180);
 		    	quad[1].color = sf::Color(226, 174, 180);
 		    	quad[2].color = sf::Color(226, 174, 180);
