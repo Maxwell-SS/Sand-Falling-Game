@@ -1,7 +1,5 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
 
 class Cell : public sf::Drawable, public sf::Transformable
 {

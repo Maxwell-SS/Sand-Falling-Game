@@ -1,6 +1,4 @@
 #include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
 
 #include "Cell.hpp"
 #include "Common.hpp"
