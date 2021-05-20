@@ -59,19 +59,31 @@ int main()
 			if (ui.ButtonClicked(localMousePosition) == false) {
 				int xPos = localMousePosition.x / cellSize;
 				int yPos = localMousePosition.y / cellSize;
-			
-				for (int x = 0; x < brushSize; ++x) {
-					for (int y = 0; y < brushSize; ++y) {
-						if (y % 2 == 1 && x % 2 == 1) {
-							cell.ChangeGrid(xPos + x, yPos + y, selectedCell);
-							cell.ChangeGrid(xPos - x, yPos - y, selectedCell);
-							cell.ChangeGrid(xPos - x, yPos + y, selectedCell);
-							cell.ChangeGrid(xPos + x, yPos - y, selectedCell);
 
-							cell.ChangeGrid(xPos + x +1, yPos + y +1, selectedCell);
-							cell.ChangeGrid(xPos - x +1, yPos - y +1, selectedCell);
-							cell.ChangeGrid(xPos - x +1, yPos + y +1, selectedCell);
-							cell.ChangeGrid(xPos + x +1, yPos - y +1, selectedCell);
+				if (xPos > 0 && xPos < gridWidth - 1 && yPos > 0 && yPos < gridHeight - 1) {
+					for (int x = 0; x < brushSize; ++x) {
+						for (int y = 0; y < brushSize; ++y) {
+							if (xPos - brushSize > 0 && xPos + brushSize < gridWidth - 1 && yPos - brushSize > 0 && yPos + brushSize < gridHeight - 1) {
+								cell.ChangeGrid(xPos + x, yPos + y, selectedCell);
+								cell.ChangeGrid(xPos - x, yPos - y, selectedCell);
+								cell.ChangeGrid(xPos - x, yPos + y, selectedCell);
+								cell.ChangeGrid(xPos + x, yPos - y, selectedCell);
+							} 
+							else {
+								if (xPos - x > 0 && yPos - y > 0) {
+									cell.ChangeGrid(xPos - x, yPos - y, selectedCell);
+								}
+								if (xPos + x < gridWidth - 1 && yPos + y < gridHeight - 1) {
+									cell.ChangeGrid(xPos + x, yPos + y, selectedCell);
+								}
+
+								if (xPos - x > 0 && yPos + y < gridHeight - 1) {
+									cell.ChangeGrid(xPos - x, yPos + y, selectedCell);
+								}
+								if (xPos + x < gridWidth - 1 && yPos - y > 0) {
+									cell.ChangeGrid(xPos + x, yPos - y, selectedCell);
+								}
+							}
 						}
 					}
 				}

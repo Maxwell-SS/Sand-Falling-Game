@@ -87,7 +87,7 @@ void Cell::SwapCells(int xOne, int yOne, int xTwo, int yTwo) {
 }
 
 void Cell::UpdateSand(int x, int y) {
-	if (y == height - 1 || x == width - 1 || x == 1) {
+	if (y == height - 1 || x == width - 1 || x == 0) {
 		ChangeGrid(x, y, 1);
 	} 
 	else if (ReturnGrid(x, y + 1) == 1 || ReturnGrid(x, y + 1) == 3 || ReturnGrid(x, y + 1) == 4) {
@@ -129,7 +129,7 @@ void Cell::UpdateSand(int x, int y) {
 }
 
 void Cell::UpdateWater(int x, int y) {
-    if (y == height - 1 || x == width - 1 || x == 1) {
+    if (y == height - 1 || x == width - 1 || x == 0) {
         ChangeGrid(x, y, 2);
     } 
 	else if (ReturnGrid(x, y + 1) == 1 || ReturnGrid(x, y + 1) == 2 || ReturnGrid(x, y + 1) == 3 || ReturnGrid(x, y + 1) == 4) {
@@ -205,7 +205,7 @@ void Cell::UpdateWater(int x, int y) {
 }
 
 void Cell::UpdateStone(int x, int y) {
-    if (y == height - 1 || x == width - 1 || x == 1) {
+    if (y == height - 1 || x == width - 1 || x == 0) {
         ChangeGrid(x, y, 3);
     } 
     else if (ReturnGrid(x, y + 1) == 1 || ReturnGrid(x, y + 1) == 3 || ReturnGrid(x, y + 1) == 4) {
