@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/SandFallingGame.dir/src/Cell.cpp.o CMakeFiles/SandFallingGame.dir/src/UI.cpp.o CMakeFiles/SandFallingGame.dir/src/main.cpp.o -o SandFallingGame  /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1 

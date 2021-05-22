@@ -15,7 +15,7 @@ int gridHeight = windowHeight / cellSize;
 sf::Color cellColors[] = 
 {
 sf::Color(0, 0, 0), sf::Color(232,201,100), sf::Color(28,163,236),
-sf::Color(136,140,141), sf::Color(70, 71, 62)
+sf::Color(136,140,141), sf::Color(70, 71, 62), sf::Color(240,127,19)
 };
 
 int main()
@@ -27,7 +27,7 @@ int main()
 	cell.InitGrid();
 	
 	UI ui(gridWidth, gridHeight);
-	ui.InitButtons(1, 5);
+	ui.InitButtons(1, 6);
 	ui.DrawButtons(windowWidth - 40, (windowHeight - windowHeight) + 10, 30, 30, 40);
 	
 		
@@ -103,6 +103,9 @@ int main()
 				} 
 				else if (cell.ReturnGrid(x, y) == 4 && cell.ReturnUpdateGrid(x, y) == false) {
 					cell.UpdateWall(x, y);
+				}
+				else if (cell.ReturnGrid(x, y) == 5 && cell.ReturnUpdateGrid(x, y) == false) {
+					//cell.UpdateFire(x, y);
 				}
 			}
 		}
