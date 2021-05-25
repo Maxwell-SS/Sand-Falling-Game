@@ -2,7 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 
-class Elements : public sf::Drawable, public sf::Transformable
+class Logic
 {
 public:
 	struct Cell

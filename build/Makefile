@@ -129,29 +129,149 @@ SandFallingGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/build
 .PHONY : SandFallingGame/fast
 
-src/Cell.o: src/Cell.cpp.o
-.PHONY : src/Cell.o
+src/Elements/Sand.o: src/Elements/Sand.cpp.o
+.PHONY : src/Elements/Sand.o
 
 # target to build an object file
-src/Cell.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Cell.cpp.o
-.PHONY : src/Cell.cpp.o
+src/Elements/Sand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Sand.cpp.o
+.PHONY : src/Elements/Sand.cpp.o
 
-src/Cell.i: src/Cell.cpp.i
-.PHONY : src/Cell.i
+src/Elements/Sand.i: src/Elements/Sand.cpp.i
+.PHONY : src/Elements/Sand.i
 
 # target to preprocess a source file
-src/Cell.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Cell.cpp.i
-.PHONY : src/Cell.cpp.i
+src/Elements/Sand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Sand.cpp.i
+.PHONY : src/Elements/Sand.cpp.i
 
-src/Cell.s: src/Cell.cpp.s
-.PHONY : src/Cell.s
+src/Elements/Sand.s: src/Elements/Sand.cpp.s
+.PHONY : src/Elements/Sand.s
 
 # target to generate assembly for a file
-src/Cell.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Cell.cpp.s
-.PHONY : src/Cell.cpp.s
+src/Elements/Sand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Sand.cpp.s
+.PHONY : src/Elements/Sand.cpp.s
+
+src/Elements/Stone.o: src/Elements/Stone.cpp.o
+.PHONY : src/Elements/Stone.o
+
+# target to build an object file
+src/Elements/Stone.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Stone.cpp.o
+.PHONY : src/Elements/Stone.cpp.o
+
+src/Elements/Stone.i: src/Elements/Stone.cpp.i
+.PHONY : src/Elements/Stone.i
+
+# target to preprocess a source file
+src/Elements/Stone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Stone.cpp.i
+.PHONY : src/Elements/Stone.cpp.i
+
+src/Elements/Stone.s: src/Elements/Stone.cpp.s
+.PHONY : src/Elements/Stone.s
+
+# target to generate assembly for a file
+src/Elements/Stone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Stone.cpp.s
+.PHONY : src/Elements/Stone.cpp.s
+
+src/Elements/Wall.o: src/Elements/Wall.cpp.o
+.PHONY : src/Elements/Wall.o
+
+# target to build an object file
+src/Elements/Wall.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Wall.cpp.o
+.PHONY : src/Elements/Wall.cpp.o
+
+src/Elements/Wall.i: src/Elements/Wall.cpp.i
+.PHONY : src/Elements/Wall.i
+
+# target to preprocess a source file
+src/Elements/Wall.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Wall.cpp.i
+.PHONY : src/Elements/Wall.cpp.i
+
+src/Elements/Wall.s: src/Elements/Wall.cpp.s
+.PHONY : src/Elements/Wall.s
+
+# target to generate assembly for a file
+src/Elements/Wall.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Wall.cpp.s
+.PHONY : src/Elements/Wall.cpp.s
+
+src/Elements/Water.o: src/Elements/Water.cpp.o
+.PHONY : src/Elements/Water.o
+
+# target to build an object file
+src/Elements/Water.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Water.cpp.o
+.PHONY : src/Elements/Water.cpp.o
+
+src/Elements/Water.i: src/Elements/Water.cpp.i
+.PHONY : src/Elements/Water.i
+
+# target to preprocess a source file
+src/Elements/Water.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Water.cpp.i
+.PHONY : src/Elements/Water.cpp.i
+
+src/Elements/Water.s: src/Elements/Water.cpp.s
+.PHONY : src/Elements/Water.s
+
+# target to generate assembly for a file
+src/Elements/Water.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Elements/Water.cpp.s
+.PHONY : src/Elements/Water.cpp.s
+
+src/Grid.o: src/Grid.cpp.o
+.PHONY : src/Grid.o
+
+# target to build an object file
+src/Grid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Grid.cpp.o
+.PHONY : src/Grid.cpp.o
+
+src/Grid.i: src/Grid.cpp.i
+.PHONY : src/Grid.i
+
+# target to preprocess a source file
+src/Grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Grid.cpp.i
+.PHONY : src/Grid.cpp.i
+
+src/Grid.s: src/Grid.cpp.s
+.PHONY : src/Grid.s
+
+# target to generate assembly for a file
+src/Grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Grid.cpp.s
+.PHONY : src/Grid.cpp.s
+
+src/Misc.o: src/Misc.cpp.o
+.PHONY : src/Misc.o
+
+# target to build an object file
+src/Misc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Misc.cpp.o
+.PHONY : src/Misc.cpp.o
+
+src/Misc.i: src/Misc.cpp.i
+.PHONY : src/Misc.i
+
+# target to preprocess a source file
+src/Misc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Misc.cpp.i
+.PHONY : src/Misc.cpp.i
+
+src/Misc.s: src/Misc.cpp.s
+.PHONY : src/Misc.s
+
+# target to generate assembly for a file
+src/Misc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SandFallingGame.dir/build.make CMakeFiles/SandFallingGame.dir/src/Misc.cpp.s
+.PHONY : src/Misc.cpp.s
 
 src/UI.o: src/UI.cpp.o
 .PHONY : src/UI.o
@@ -210,9 +330,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SandFallingGame"
-	@echo "... src/Cell.o"
-	@echo "... src/Cell.i"
-	@echo "... src/Cell.s"
+	@echo "... src/Elements/Sand.o"
+	@echo "... src/Elements/Sand.i"
+	@echo "... src/Elements/Sand.s"
+	@echo "... src/Elements/Stone.o"
+	@echo "... src/Elements/Stone.i"
+	@echo "... src/Elements/Stone.s"
+	@echo "... src/Elements/Wall.o"
+	@echo "... src/Elements/Wall.i"
+	@echo "... src/Elements/Wall.s"
+	@echo "... src/Elements/Water.o"
+	@echo "... src/Elements/Water.i"
+	@echo "... src/Elements/Water.s"
+	@echo "... src/Grid.o"
+	@echo "... src/Grid.i"
+	@echo "... src/Grid.s"
+	@echo "... src/Misc.o"
+	@echo "... src/Misc.i"
+	@echo "... src/Misc.s"
 	@echo "... src/UI.o"
 	@echo "... src/UI.i"
 	@echo "... src/UI.s"

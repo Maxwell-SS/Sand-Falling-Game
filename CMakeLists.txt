@@ -3,12 +3,17 @@ cmake_minimum_required(VERSION 3.2)
 project(SandFallingGame)
 
 set(SOURCES
-	src/Cell.cpp
 	src/UI.cpp
-	src/main.cpp)
+	src/Grid.cpp
+	src/main.cpp
+	src/Misc.cpp
+	src/Elements/Sand.cpp
+	src/Elements/Wall.cpp
+	src/Elements/Stone.cpp
+	src/Elements/Water.cpp)
 
 set(INCLUDES
-	include/Cell.hpp
+	include/Elements.hpp
 	include/Common.hpp
 	include/UI.hpp)
 

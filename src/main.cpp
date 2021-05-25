@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-#include "Cell.hpp"
+#include "Elements.hpp"
 #include "UI.hpp"
 #include "Common.hpp"
 
@@ -15,7 +15,7 @@ int gridHeight = windowHeight / cellSize;
 sf::Color cellColors[] = 
 {
 sf::Color(0, 0, 0), sf::Color(232,201,100), sf::Color(28,163,236),
-sf::Color(136,140,141), sf::Color(70, 71, 62), sf::Color(240,127,19)
+sf::Color(136,140,141), sf::Color(70, 71, 62)
 };
 
 int main()
@@ -23,13 +23,14 @@ int main()
 	sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "");
 	window.setFramerateLimit(60);
 	
-	Cell cell(cellSize, gridWidth, gridHeight);
-	cell.InitGrid();
+	Elements elements(cellSize, gridWidth, gridHeight);
+	elements.InitGrid();
 	
 	UI ui(gridWidth, gridHeight);
-	ui.InitButtons(1, 6);
+	ui.InitButtons(1, 5);
 	ui.DrawButtons(windowWidth - 40, (windowHeight - windowHeight) + 10, 30, 30, 40);
 	
+	elements.InitSand();
 		
 	sf::Clock clock;
 	while (window.isOpen())
@@ -64,24 +65,24 @@ int main()
 					for (int x = 0; x < brushSize; ++x) {
 						for (int y = 0; y < brushSize; ++y) {
 							if (xPos - brushSize > 0 && xPos + brushSize < gridWidth - 1 && yPos - brushSize > 0 && yPos + brushSize < gridHeight - 1) {
-								cell.ChangeGrid(xPos + x, yPos + y, selectedCell);
-								cell.ChangeGrid(xPos - x, yPos - y, selectedCell);
-								cell.ChangeGrid(xPos - x, yPos + y, selectedCell);
-								cell.ChangeGrid(xPos + x, yPos - y, selectedCell);
+								elements.grid[xPos + x][yPos + y] = selectedCell;
+								elements.grid[xPos - x][yPos - y] = selectedCell;
+								elements.grid[xPos - x][yPos + y] = selectedCell;
+								elements.grid[xPos + x][yPos - y] = selectedCell;
 							} 
 							else {
 								if (xPos - x > 0 && yPos - y > 0) {
-									cell.ChangeGrid(xPos - x, yPos - y, selectedCell);
+									elements.grid[xPos - x][yPos - y] = selectedCell;
 								}
 								if (xPos + x < gridWidth - 1 && yPos + y < gridHeight - 1) {
-									cell.ChangeGrid(xPos + x, yPos + y, selectedCell);
+									elements.grid[xPos + x][yPos + y] = selectedCell;
 								}
 
 								if (xPos - x > 0 && yPos + y < gridHeight - 1) {
-									cell.ChangeGrid(xPos - x, yPos + y, selectedCell);
+									elements.grid[xPos - x][yPos + y] = selectedCell;
 								}
 								if (xPos + x < gridWidth - 1 && yPos - y > 0) {
-									cell.ChangeGrid(xPos + x, yPos - y, selectedCell);
+									elements.grid[xPos + x][yPos - y] = selectedCell;
 								}
 							}
 						}
@@ -92,30 +93,27 @@ int main()
 
 		for (int x = 0; x < gridWidth; ++x) {
 			for (int y = 0; y < gridHeight; ++y) {
-				if (cell.ReturnGrid(x, y) == 1 && cell.ReturnUpdateGrid(x, y) == false) {
-					cell.UpdateSand(x, y);
+				if (elements.grid[x][y] == 1 && elements.updateGrid[x][y] == false) {
+					elements.UpdateSand(x, y);
 				}
-				else if (cell.ReturnGrid(x, y) == 2 && cell.ReturnUpdateGrid(x, y) == false) {
-					cell.UpdateWater(x, y);
+				else if (elements.grid[x][y] == 2 && elements.updateGrid[x][y] == false) {
+					//elements.UpdateWater(x, y);
 				}
-				else if (cell.ReturnGrid(x, y) == 3 && cell.ReturnUpdateGrid(x, y) == false) {
-					cell.UpdateStone(x, y);
+				else if (elements.grid[x][y] == 3 && elements.updateGrid[x][y] == false) {
+					//elements.UpdateStone(x, y);
 				} 
-				else if (cell.ReturnGrid(x, y) == 4 && cell.ReturnUpdateGrid(x, y) == false) {
-					cell.UpdateWall(x, y);
-				}
-				else if (cell.ReturnGrid(x, y) == 5 && cell.ReturnUpdateGrid(x, y) == false) {
-					//cell.UpdateFire(x, y);
+				else if (elements.grid[x][y] == 4 && elements.updateGrid[x][y] == false) {
+					//elements.UpdateWall(x, y);
 				}
 			}
 		}
 
-		cell.ResetUpdateGrid();
+		elements.ResetUpdateGrid();
 
 		window.clear();
 
-		cell.ColorGrid();
-		window.draw(cell);
+		elements.ColorGrid();
+		window.draw(elements);
 		
 		window.draw(ui);
 
