@@ -43,8 +43,8 @@ public:
 	// End Grid.cpp
 	
 	// Start Logic.cpp
-	void DefaultSand(Cell cellType);
-	void DefaultWater(Cell cellType);
+	void DefaultSand(Cell cellType, int x, int y);
+	void DefaultWater(Cell cellType, int x, int y);
 	void DefaultSteam(Cell cellType);
 	void DefaultFire(Cell cellType);
 	// End Logic.cpp

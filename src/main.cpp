@@ -31,6 +31,7 @@ int main()
 	ui.DrawButtons(windowWidth - 40, (windowHeight - windowHeight) + 10, 30, 30, 40);
 	
 	elements.InitSand();
+	elements.InitWater();
 		
 	sf::Clock clock;
 	while (window.isOpen())
@@ -97,7 +98,7 @@ int main()
 					elements.UpdateSand(x, y);
 				}
 				else if (elements.grid[x][y] == 2 && elements.updateGrid[x][y] == false) {
-					//elements.UpdateWater(x, y);
+					elements.UpdateWater(x, y);
 				}
 				else if (elements.grid[x][y] == 3 && elements.updateGrid[x][y] == false) {
 					//elements.UpdateStone(x, y);

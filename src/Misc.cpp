@@ -22,6 +22,10 @@ void Elements::SwapCells(int xOne, int yOne, int xTwo, int yTwo) {
 	grid[xTwo][yTwo] = one;
 }
 
+void Elements::UpdateAllElements(int x, int y) {
+	
+}
+
 void Elements::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	states.transform *= getTransform();

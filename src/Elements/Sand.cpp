@@ -21,5 +21,5 @@ void Elements::InitSand() {
 }
 
 void Elements::UpdateSand(int x, int y) {
-	Elements::DefaultSand(sand);
+	Elements::DefaultSand(sand, x, y);
 }

@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 #include "UI/UI.hpp"
 #include "Common.hpp"
@@ -51,6 +52,7 @@ bool UI::ButtonClicked(sf::Vector2i mousePosition) {
 		
 		if (mousePosition.x > TopLeft.x && mousePosition.x < TopRight.x && mousePosition.y > TopLeft.y && mousePosition.y < BottomRight.y) {
 			selectedCell = i / 4;
+			std::cout << selectedCell << std::endl;
 			return true;
 		} 
 	}
