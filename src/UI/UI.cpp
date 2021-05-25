@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 
-#include "UI.hpp"
+#include "UI/UI.hpp"
 #include "Common.hpp"
 
 UI::UI(int ScreenWidth, int ScreenHeight) {

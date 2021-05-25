@@ -24,9 +24,8 @@ public:
 public:
 	int **grid;
 	bool **updateGrid;
-
-	int Top = -1, Left = -1;
-	int Bottom = 1, Right = 1;
+	
+	int width, height;
 
 	Cell CellArray[100];
 
@@ -42,6 +41,13 @@ public:
 
 	void ResetUpdateGrid();
 	// End Grid.cpp
+	
+	// Start Logic.cpp
+	void DefaultSand(Cell cellType);
+	void DefaultWater(Cell cellType);
+	void DefaultSteam(Cell cellType);
+	void DefaultFire(Cell cellType);
+	// End Logic.cpp
 
 	// Sand.cpp
 	void InitSand();
@@ -63,7 +69,7 @@ private:
 
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	
-	int width, height, cellSize;
+	int cellSize;
 	
 	sf::VertexArray cellVertices;
 };

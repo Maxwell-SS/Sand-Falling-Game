@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "Elements.hpp"
-#include "UI.hpp"
+#include "UI/UI.hpp"
 #include "Common.hpp"
 
 int windowWidth = 1280, windowHeight = 720;

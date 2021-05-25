@@ -1,21 +1,25 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/src/Elements/Sand.cpp" "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir/src/Elements/Sand.cpp.o"
+  "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/src/Elements/Stone.cpp" "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir/src/Elements/Stone.cpp.o"
+  "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/src/Elements/Wall.cpp" "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir/src/Elements/Wall.cpp.o"
+  "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/src/Elements/Water.cpp" "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir/src/Elements/Water.cpp.o"
+  "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/src/Grid.cpp" "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir/src/Grid.cpp.o"
+  "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/src/Logic.cpp" "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir/src/Logic.cpp.o"
+  "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/src/Misc.cpp" "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir/src/Misc.cpp.o"
+  "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/src/UI/UI.cpp" "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir/src/UI/UI.cpp.o"
+  "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/src/main.cpp" "/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir/src/main.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/max/Programming/C++ Projects/SFML Projects/Sand-Falling-Game/src/Elements/Sand.cpp" "CMakeFiles/SandFallingGame.dir/src/Elements/Sand.cpp.o" "gcc" "CMakeFiles/SandFallingGame.dir/src/Elements/Sand.cpp.o.d"
-  "/home/max/Programming/C++ Projects/SFML Projects/Sand-Falling-Game/src/Elements/Stone.cpp" "CMakeFiles/SandFallingGame.dir/src/Elements/Stone.cpp.o" "gcc" "CMakeFiles/SandFallingGame.dir/src/Elements/Stone.cpp.o.d"
-  "/home/max/Programming/C++ Projects/SFML Projects/Sand-Falling-Game/src/Elements/Wall.cpp" "CMakeFiles/SandFallingGame.dir/src/Elements/Wall.cpp.o" "gcc" "CMakeFiles/SandFallingGame.dir/src/Elements/Wall.cpp.o.d"
-  "/home/max/Programming/C++ Projects/SFML Projects/Sand-Falling-Game/src/Elements/Water.cpp" "CMakeFiles/SandFallingGame.dir/src/Elements/Water.cpp.o" "gcc" "CMakeFiles/SandFallingGame.dir/src/Elements/Water.cpp.o.d"
-  "/home/max/Programming/C++ Projects/SFML Projects/Sand-Falling-Game/src/Grid.cpp" "CMakeFiles/SandFallingGame.dir/src/Grid.cpp.o" "gcc" "CMakeFiles/SandFallingGame.dir/src/Grid.cpp.o.d"
-  "/home/max/Programming/C++ Projects/SFML Projects/Sand-Falling-Game/src/Misc.cpp" "CMakeFiles/SandFallingGame.dir/src/Misc.cpp.o" "gcc" "CMakeFiles/SandFallingGame.dir/src/Misc.cpp.o.d"
-  "/home/max/Programming/C++ Projects/SFML Projects/Sand-Falling-Game/src/UI.cpp" "CMakeFiles/SandFallingGame.dir/src/UI.cpp.o" "gcc" "CMakeFiles/SandFallingGame.dir/src/UI.cpp.o.d"
-  "/home/max/Programming/C++ Projects/SFML Projects/Sand-Falling-Game/src/main.cpp" "CMakeFiles/SandFallingGame.dir/src/main.cpp.o" "gcc" "CMakeFiles/SandFallingGame.dir/src/main.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../include"
+  "/usr/local/include"
   )
 
 # Targets to which this target links.
