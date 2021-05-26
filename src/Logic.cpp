@@ -3,10 +3,12 @@
 #include "Elements.hpp"
 
 void Elements::DefaultSand(Cell cellType, int x, int y) {
+	// solid
+	
 	if (y == height - 1 || x == width - 1 || x == 0) {
 		grid[x][y] = cellType.cellNumber;
 	}
-	else if (grid[x][y + 1] == 1) {
+	else if (grid[x][y + 1] == 1) {		
 		if (grid[x - 1][y + 1] == 0 && grid[x + 1][y + 1] == 0){
 			grid[x][y] = 0;
 
@@ -28,7 +30,7 @@ void Elements::DefaultSand(Cell cellType, int x, int y) {
 		}
 		else if (grid[x + 1][y + 1] == 0) {
 			grid[x][y] = 0;
-
+		
 			if (grid[x - 1][y + 1] == 1) {
 				grid[x + 1][y + 1] = cellType.cellNumber;
 				updateGrid[x + 1][y + 1] = true;

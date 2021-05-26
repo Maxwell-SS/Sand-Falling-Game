@@ -27,19 +27,20 @@ public:
 	bool **updateGrid;
 	
 	int width, height;
+	
+	int gas, liquid, solid;
 
-	// Cell *CellArray = new Cell[numberOfElements];
+	Cell *CellArray;
 
-	// Cell *solidCells = new Cell[numberOfElements];
-	// Cell *liquidCells = new Cell[numberOfElements];
-	// Cell *gasCells = new Cell[numberOfElements];
+	Cell *solidCells;
+	Cell *liquidCells;
+	Cell *gasCells;
 
 public:
 	// Misc.cpp
 	Elements(int cellSize, int gridWdth, int gridHeight);
 	void AddGravity(int x, int y, int cellNumber, int gravity);
 	void SwapCells(int xOne, int yOne, int xTwo, int yTwo);
-	void SortCells();
 
 	// Start Grid.cpp
 	void InitGrid();
@@ -54,7 +55,10 @@ public:
 	void DefaultSteam(Cell cellType);
 	void DefaultFire(Cell cellType);
 	// End Logic.cpp
-
+	
+	// None.cpp
+	void InitNone();
+	
 	// Sand.cpp
 	void InitSand();
 	void UpdateSand(int x, int y);
@@ -70,6 +74,8 @@ public:
 	//Wall.cpp
 	void InitWall();
 	void UpdateWall(int x, int y);
+	
+	void SortCells();
 
 private:
 

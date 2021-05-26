@@ -11,13 +11,13 @@ void Elements::InitWater() {
 	water.buoyancy = 0;
 	water.flammability = 0;
 
-	water.isSolid = false;
-	water.isLiquid = true;
+	water.isSolid = true;
+	water.isLiquid = false;
 	water.isGas = false;
 
 	water.color = sf::Color(28,163,236);
 
-	//Elements::CellArray[water.cellNumber] = water;
+	CellArray[water.cellNumber] = water;	
 }
 
 void Elements::UpdateWater(int x, int y) {

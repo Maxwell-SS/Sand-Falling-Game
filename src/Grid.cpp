@@ -7,6 +7,8 @@ void Elements::InitGrid() {
 	cellVertices.setPrimitiveType(sf::Quads);
 	cellVertices.resize(width * height * 4);
 
+	CellArray = new Cell[numberOfElements];
+	
 	grid = new int *[width];
 	updateGrid = new bool *[width];
 	for(int i = 0; i < width; i++) {

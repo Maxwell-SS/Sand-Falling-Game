@@ -2,8 +2,9 @@
 
 #include "Elements.hpp"
 
+Elements::Cell wall;
+
 void Elements::InitWall() {
-	Elements::Cell wall;
 	wall.cellNumber = 4;
 	wall.gravity = 0;
 
@@ -16,7 +17,7 @@ void Elements::InitWall() {
 
 	wall.color = sf::Color(204, 204, 204);
 
-	//Elements::CellArray[wall.cellNumber] = wall;
+	Elements::CellArray[wall.cellNumber] = wall;
 }
 
 void Elements::UpdateWall(int x, int y) {

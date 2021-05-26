@@ -13,6 +13,7 @@ set(SOURCES
 	src/Misc.cpp
 	src/Logic.cpp
 	src/UI/UI.cpp
+	src/Elements/None.cpp
 	src/Elements/Sand.cpp
 	src/Elements/Wall.cpp
 	src/Elements/Stone.cpp

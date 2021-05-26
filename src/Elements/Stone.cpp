@@ -2,8 +2,9 @@
 
 #include "Elements.hpp"
 
+Elements::Cell stone;
+
 void Elements::InitStone() {
-	Elements::Cell stone;
 	stone.cellNumber = 3;
 	stone.gravity = 1;
 
@@ -16,7 +17,7 @@ void Elements::InitStone() {
 
 	stone.color = sf::Color(136,140,141);
 
-	//Elements::CellArray[stone.cellNumber] = stone;
+	Elements::CellArray[stone.cellNumber] = stone;
 }
 
 void Elements::UpdateStone(int x, int y) {

@@ -7,7 +7,7 @@
 
 int windowWidth = 1280, windowHeight = 720;
 
-int cellSize = 3, brushSize = 5, selectedCell = 0, numberOfElements = 2;
+int cellSize = 3, brushSize = 5, selectedCell = 0, numberOfElements = 5;
 
 int gridWidth = windowWidth / cellSize;
 int gridHeight = windowHeight / cellSize;
@@ -34,12 +34,15 @@ int main()
 	ui.InitButtons(1, 5);
 	ui.DrawButtons(windowWidth - 40, (windowHeight - windowHeight) + 10, 30, 30, 40);
 	
-	// Initializing all of the elements 
+	// Initializing all of the elements
+	elements.InitNone();
 	elements.InitSand();
 	elements.InitWater();
+	elements.InitStone();
+	elements.InitWall();
 
 	// Sorting cells into different arrays
-	//lements.SortCells();
+	elements.SortCells();
 	
 	// Clock to get delta time
 	sf::Clock clock;
@@ -123,7 +126,7 @@ int main()
 
 		elements.ResetUpdateGrid();
 
-		window.clear();
+		window.clear(sf::Color::White);
 
 		elements.ColorGrid();
 		window.draw(elements);

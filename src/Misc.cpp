@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 #include "Elements.hpp"
 
@@ -23,19 +24,51 @@ void Elements::SwapCells(int xOne, int yOne, int xTwo, int yTwo) {
 }
 
 void Elements::SortCells() {
-	// for (int i = 0; i < numberOfElements; ++i) {
-	// 	if (CellArray[i].isSolid) {
-	// 		solidCells[i] = CellArray[i];
-	// 	}
+	gas = 0;
+	liquid = 0;
+	solid = 0;
+	
+	int gasTwo = 0;
+	int liquidTwo = 0;
+	int solidTwo = 0;
+	
+	for (int i = 0; i < numberOfElements; ++i) {
+		
+		std::cout << CellArray[i].cellNumber << std::endl;
+		
+		if (CellArray[i].isSolid) {
+			solid += 1;
+		}
 
-	// 	else if (CellArray[i].isLiquid) {
-	// 		liquidCells[i] = CellArray[i];
-	// 	}
+		if (CellArray[i].isLiquid) {
+			liquid += 1;
+		}
 
-	// 	else if (CellArray[i].isGas) {
-	// 		gasCells[i] = CellArray[i];
-	// 	}
-	// }
+		if (CellArray[i].isGas) {
+			gas += 1;
+		}
+	}
+	
+	solidCells = new Cell[solid];
+	liquidCells = new Cell[liquid];
+	gasCells = new Cell[gas];
+	
+	for (int i = 0; i < numberOfElements; ++i) {		
+		if (CellArray[i].isSolid) {
+			solidCells[solidTwo] = CellArray[i];
+			solidTwo += 1;
+		}
+
+		else if (CellArray[i].isLiquid) {
+			liquidCells[liquidTwo] = CellArray[i];
+			liquidTwo += 1;
+		}
+
+		else if (CellArray[i].isGas) {
+			gasCells[gasTwo] = CellArray[i];
+			gasTwo += 1;
+		}
+	}
 }
 
 void Elements::draw(sf::RenderTarget& target, sf::RenderStates states) const {
