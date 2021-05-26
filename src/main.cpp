@@ -7,7 +7,7 @@
 
 int windowWidth = 1280, windowHeight = 720;
 
-int cellSize = 3, brushSize = 5, selectedCell = 0;
+int cellSize = 3, brushSize = 5, selectedCell = 0, numberOfElements = 2;
 
 int gridWidth = windowWidth / cellSize;
 int gridHeight = windowHeight / cellSize;
@@ -20,26 +20,37 @@ sf::Color(136,140,141), sf::Color(70, 71, 62)
 
 int main()
 {
+	// SFML Window
 	sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "");
 	window.setFramerateLimit(60);
-	
+
+	// Defining elements and initializing the grid
 	Elements elements(cellSize, gridWidth, gridHeight);
 	elements.InitGrid();
 	
+	// Defining the UI
 	UI ui(gridWidth, gridHeight);
+	// The UI works like a grid 
 	ui.InitButtons(1, 5);
 	ui.DrawButtons(windowWidth - 40, (windowHeight - windowHeight) + 10, 30, 30, 40);
 	
+	// Initializing all of the elements 
 	elements.InitSand();
 	elements.InitWater();
-		
+
+	// Sorting cells into different arrays
+	//lements.SortCells();
+	
+	// Clock to get delta time
 	sf::Clock clock;
 	while (window.isOpen())
 	{
+		// Getting deltatime and converting it into fps
 		double deltaTime = clock.restart().asSeconds();
 		int fps = 1.f / deltaTime;
 		window.setTitle("FPS: " + std::to_string(fps));
-		
+
+		// Handing window closing and mouse wheel inputs
 		sf::Event event;
 		while (window.pollEvent(event)) {
 			if (event.type == sf::Event::Closed) {
@@ -55,6 +66,7 @@ int main()
 			}
 		}
 		
+		// Drawing whichever cell is selected
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
 			sf::Vector2i localMousePosition = sf::Mouse::getPosition(window);
 			

@@ -17,7 +17,7 @@ void Elements::InitSand() {
 
 	sand.color = sf::Color(232,201,100);
 
-	Elements::CellArray[sand.cellNumber] = sand;
+	//Elements::CellArray[sand.cellNumber] = sand;
 }
 
 void Elements::UpdateSand(int x, int y) {

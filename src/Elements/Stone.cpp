@@ -16,7 +16,7 @@ void Elements::InitStone() {
 
 	stone.color = sf::Color(136,140,141);
 
-	Elements::CellArray[stone.cellNumber] = stone;
+	//Elements::CellArray[stone.cellNumber] = stone;
 }
 
 void Elements::UpdateStone(int x, int y) {

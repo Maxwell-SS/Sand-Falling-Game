@@ -1,9 +1,8 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "Common.hpp"
 
-class Elements : public sf::Drawable, public sf::Transformable
+class Logic
 {
 public:
 	struct Cell
@@ -25,21 +24,17 @@ public:
 public:
 	int **grid;
 	bool **updateGrid;
-	
-	int width, height;
 
-	// Cell *CellArray = new Cell[numberOfElements];
+	int Top = -1, Left = -1;
+	int Bottom = 1, Right = 1;
 
-	// Cell *solidCells = new Cell[numberOfElements];
-	// Cell *liquidCells = new Cell[numberOfElements];
-	// Cell *gasCells = new Cell[numberOfElements];
+	Cell CellArray[100];
 
 public:
 	// Misc.cpp
 	Elements(int cellSize, int gridWdth, int gridHeight);
 	void AddGravity(int x, int y, int cellNumber, int gravity);
 	void SwapCells(int xOne, int yOne, int xTwo, int yTwo);
-	void SortCells();
 
 	// Start Grid.cpp
 	void InitGrid();
@@ -47,13 +42,6 @@ public:
 
 	void ResetUpdateGrid();
 	// End Grid.cpp
-	
-	// Start Logic.cpp
-	void DefaultSand(Cell cellType, int x, int y);
-	void DefaultWater(Cell cellType, int x, int y);
-	void DefaultSteam(Cell cellType);
-	void DefaultFire(Cell cellType);
-	// End Logic.cpp
 
 	// Sand.cpp
 	void InitSand();
@@ -75,7 +63,7 @@ private:
 
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	
-	int cellSize;
+	int width, height, cellSize;
 	
 	sf::VertexArray cellVertices;
 };

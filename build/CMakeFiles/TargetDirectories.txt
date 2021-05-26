@@ -1,3 +1,0 @@
-/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/rebuild_cache.dir
-/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/edit_cache.dir
-/Users/max/Documents/C++ Projects/SFML Projects/Sand-Falling-Game/build/CMakeFiles/SandFallingGame.dir

@@ -11,5 +11,5 @@
 extern int windowWidth, windowHeight;
 
 // Cells 
-extern int selectedCell;
+extern int selectedCell, numberOfElements;
 extern sf::Color cellColors[];

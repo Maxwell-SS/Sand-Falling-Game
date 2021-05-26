@@ -17,7 +17,7 @@ void Elements::InitWater() {
 
 	water.color = sf::Color(28,163,236);
 
-	Elements::CellArray[water.cellNumber] = water;
+	//Elements::CellArray[water.cellNumber] = water;
 }
 
 void Elements::UpdateWater(int x, int y) {
